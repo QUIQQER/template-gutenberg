@@ -1,7 +1,7 @@
 Template Gutenberg
 ========
 
-Einfaches Template
+Einfaches Micro Template
 
 Paketname:
 
