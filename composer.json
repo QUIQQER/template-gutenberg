@@ -1,7 +1,7 @@
 {
   "name": "quiqqer\/template-gutenberg",
   "type": "quiqqer-template",
-  "description": "Website cache for QUIQQER",
+  "description": "Minimalistic micro template",
   "version": "dev-master",
   "license": "",
   "authors": [
