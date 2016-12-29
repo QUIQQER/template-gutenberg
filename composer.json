@@ -20,11 +20,13 @@
     "php": ">=5.3",
     "npm-asset\/gutenberg-css": ">=0.3",
     "quiqqer\/quiqqer": "*@dev",
+    "quiqqer\/blog": ">=1.0.0|dev-master|dev-dev",
+    "quiqqer\/buttons": ">=1.0.0|dev-master|dev-dev",
     "quiqqer\/fontawesome": "*@dev",
-    "quiqqer\/sitetypes": "*@dev",
     "quiqqer\/menu": "1.*|dev-dev",
+    "quiqqer\/news": ">=1.0.0|dev-master|dev-dev",
     "quiqqer\/page-transition": "dev-master",
     "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
-    "quiqqer\/buttons": ">=1.0.0|dev-master|dev-dev"
+    "quiqqer\/sitetypes": "*@dev"
   }
 }
