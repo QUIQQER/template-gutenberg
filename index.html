@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+    {$Template->getHeader()}
+
+    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/normalize.css"/>
+    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
+    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/gutenberg.css" media="print"/>
+    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/themes/modern.css"/>
+
+
+</head>
+<body class="page-{$Site->getId()}">
+
+
+<div class="template-gutenberg-left">
+    <div class="template-gutenberg-left-container">
+        {$Menu->create()}
+    </div>
+</div>
+
+<div class="template-gutenberg-right">
+    <main class="template-gutenberg-right-content">
+        {$Template->getLayout()}
+    </main>
+</div>
+
+<!-- Scripts -->
+<script src="{$URL_TPL_DIR}bin/js/init.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+/*
+
+Neon Green: #6FFF00
+Neon Pink: #FF00FF
+Neon Yellow: #FFFF00
+Neon Blue: #4D4DFF
+Neon Red: #FE0001
+Neon Orange: #FF4105
+Neon Purple: #993CF3
+
+ */
+
+html {
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit; /* https://css-tricks.com/box-sizing/ */
+}
+
+body {
+    background: #fafafa;
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100vh;
+}
+
+pre, code, blockquote {
+    background: #ededed !important;
+    color: #666;
+}
+
+pre {
+    padding: 10px;
+}
+
+a {
+    color: #993CF3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.template-gutenberg-left {
+    background: #111625;
+    flex: 400px 0;
+    padding: 10px;
+}
+
+.template-gutenberg-left-container {
+    position: -webkit-sticky;
+    position: sticky;
+    position: fixed;
+}
+
+.template-gutenberg-right {
+    flex: 400px 1;
+}
+
+.template-gutenberg-right-content {
+    margin: 0 auto;
+    max-width: 800px;
+    width: 100%;
+}
