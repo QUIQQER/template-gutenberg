@@ -61,25 +61,48 @@ a:hover {
 /** Right
  ======================================= */
 
-.template-gutenberg-right {
+.tpl-gutenberg-right {
     flex: 400px 1;
 }
 
-.template-gutenberg-right-content {
+.tpl-gutenberg-right-content {
+    clear: both;
+    display: block;
     margin: 0 auto;
     max-width: 800px;
     padding: 3em 2em 2em;
     width: 100%;
 }
 
-.template-gutenberg-right footer {
-    border-top: 4px solid #bbb;
+.tpl-gutenberg-right footer {
+    border-top: 1px solid rgba(0,0,0,0.2);
     color: #666;
     margin: 0 auto;
     max-width: 800px;
-    padding: 3em 2em;
+    padding: 3em 2em 8em;
     text-align: center;
     width: 100%;
+}
+
+.tpl-gutenberg-breadcrumb {
+    background: #fff;
+    bottom: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    left: 0;
+    padding: 2em;
+    position: fixed;
+    width: 100%;
+}
+
+
+.tpl-gutenberg-breadcrumb ul {
+    margin: 0;
+    padding: 0;
+}
+
+.quiqqer-breadcrumb,
+.quiqqer-breadcrumb-container {
+    float: left;
 }
 
 /** Left
@@ -89,13 +112,13 @@ a:hover {
     background: #111625;
 */
 
-.template-gutenberg-left {
+.tpl-gutenberg-left {
     background: #f1f1f1;
     flex: 400px 0;
     padding: 10px;
 }
 
-.template-gutenberg-left-container {
+.tpl-gutenberg-left-container {
     position: fixed;
     width: 380px;
 }
@@ -112,13 +135,13 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     0 0 100px #993CF3;
 
 */
-.template-gutenberg-left-logo {
+.tpl-gutenberg-left-logo {
     padding: 4em;
     text-align: center;
     width: 100%;
 }
 
-.template-gutenberg-left-logo .fa {
+.tpl-gutenberg-left-logo .fa {
     font-size: 120px;
 }
 
@@ -152,7 +175,48 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 }
 */
 @media screen and (max-width: 1000px) {
-    .template-gutenberg-left {
+    .tpl-gutenberg-left {
         display: none;
     }
 }
+
+
+/** pagination
+ ================================================== */
+
+.quiqqer-sheets-desktop {
+    clear: both;
+    display: block;
+    marin: 0 auto;
+    text-align: center;
+}
+
+.quiqqer-sheets-desktop a,
+.quiqqer-sheets-desktop span {
+    border-radius: 3px;
+    color: #5d5d5d;
+    margin-right: 2px !important;
+    padding: 0 15px;
+    float: none;
+}
+
+.quiqqer-sheets-desktop a:hover {
+    color: #fff;
+}
+
+.quiqqer-sheets-desktop .quiqqer-sheets-desktop-current {
+    background: #D9D6D7;
+    border: 1px solid #D9D6D7;
+    border-radius: 3px;
+    color: #333;
+}
+
+.quiqqer-sheets-desktop-disabled {
+    color: #ccc !important;
+    border-color: #ccc !important;
+}
+
+.quiqqer-pagination .quiqqer-sheets-desktop:last-child {
+    margin: 40px 0;
+}
+

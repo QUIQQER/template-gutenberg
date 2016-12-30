@@ -9,6 +9,10 @@
 
     {$Template->getHeader()}
 
+    {assign var=layoutType value=$Template->getLayoutType()}
+    {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
+    {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
+
     <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/normalize.css"/>
     <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
     <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/gutenberg.css" media="print"/>
@@ -18,23 +22,28 @@
 <body class="page-{$Site->getId()}">
 
 
-<div class="template-gutenberg-left">
-    <div class="template-gutenberg-left-container">
-        <div class="template-gutenberg-left-logo">
+<div class="tpl-gutenberg-left">
+    <div class="tpl-gutenberg-left-container">
+        <div class="tpl-gutenberg-left-logo">
             <a href="{url id=1}"><span class="fa fa-code"></span></a>
         </div>
         {$Menu->create()}
     </div>
 </div>
 
-<div class="template-gutenberg-right">
-    <main class="template-gutenberg-right-content">
+<div class="tpl-gutenberg-right">
+    <main class="tpl-gutenberg-right-content">
         {$Template->getLayout()}
     </main>
 
     <footer>
         {locale group="quiqqer/template-gutenberg" var="copyright.text" year=$smarty.now|date_format:"%Y"}
     </footer>
+</div>
+
+
+<div class="tpl-gutenberg-breadcrumb">
+    {$Breadcrumb->create()}
 </div>
 
 <!-- Scripts -->

@@ -19,5 +19,6 @@ $Engine->assign(array(
     'Site'       => $Site,
     'Template'   => $Template,
     'Breadcrumb' => $Breadcrumb,
-    'Menu'       => new \QUI\Controls\Navigation()
+    'Menu'       => new \QUI\Controls\Navigation(),
+    'BricksManager'  => \QUI\Bricks\Manager::init()
 ));
