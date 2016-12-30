@@ -31,12 +31,26 @@ pre, code, blockquote {
     color: #666;
 }
 
+blockquote {
+    border: 0;
+    border-left: 5px solid #bbb;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: 12px 1.5rem;
+}
+
 pre {
     padding: 10px;
 }
 
-a {
+/*
+
     color: #993CF3;
+
+*/
+
+a {
+    color: #2389d7;
     text-decoration: none;
 }
 
@@ -44,17 +58,8 @@ a:hover {
     text-decoration: underline;
 }
 
-.template-gutenberg-left {
-    background: #111625;
-    flex: 400px 0;
-    padding: 10px;
-}
-
-.template-gutenberg-left-container {
-    position: -webkit-sticky;
-    position: sticky;
-    position: fixed;
-}
+/** Right
+ ======================================= */
 
 .template-gutenberg-right {
     flex: 400px 1;
@@ -63,5 +68,91 @@ a:hover {
 .template-gutenberg-right-content {
     margin: 0 auto;
     max-width: 800px;
+    padding: 3em 2em 2em;
     width: 100%;
+}
+
+.template-gutenberg-right footer {
+    border-top: 4px solid #bbb;
+    color: #666;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 3em 2em;
+    text-align: center;
+    width: 100%;
+}
+
+/** Left
+ ======================================= */
+
+/*
+    background: #111625;
+*/
+
+.template-gutenberg-left {
+    background: #f1f1f1;
+    flex: 400px 0;
+    padding: 10px;
+}
+
+.template-gutenberg-left-container {
+    position: fixed;
+    width: 380px;
+}
+
+
+/*
+
+text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 30px rgba(255, 255, 255, 1),
+    0 0 40px #993CF3,
+    0 0 70px #993CF3,
+    0 0 80px #993CF3,
+    0 0 100px #993CF3;
+
+*/
+.template-gutenberg-left-logo {
+    padding: 4em;
+    text-align: center;
+    width: 100%;
+}
+
+.template-gutenberg-left-logo .fa {
+    font-size: 120px;
+}
+
+/** MENU
+ ======================================= */
+
+.quiqqer-navigation ul {
+    display: block;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 80%;
+}
+
+.quiqqer-navigation li {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    float: left;
+    list-style-type: none;
+    margin: 0 !important;
+    padding: 0.7em 0 !important;
+    text-align: right;
+    width: 100%;
+}
+
+.quiqqer-navigation li .fa {
+    display: none;
+}
+
+/*
+.quiqqer-navigation a {
+    color: #fff;
+}
+*/
+@media screen and (max-width: 1000px) {
+    .template-gutenberg-left {
+        display: none;
+    }
 }

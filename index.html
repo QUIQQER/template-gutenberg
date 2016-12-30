@@ -4,6 +4,9 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
+    {pace}
+    {fontawesome}
+
     {$Template->getHeader()}
 
     <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/normalize.css"/>
@@ -11,13 +14,15 @@
     <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/gutenberg.css" media="print"/>
     <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/themes/modern.css"/>
 
-
 </head>
 <body class="page-{$Site->getId()}">
 
 
 <div class="template-gutenberg-left">
     <div class="template-gutenberg-left-container">
+        <div class="template-gutenberg-left-logo">
+            <a href="{url id=1}"><span class="fa fa-code"></span></a>
+        </div>
         {$Menu->create()}
     </div>
 </div>
@@ -26,6 +31,10 @@
     <main class="template-gutenberg-right-content">
         {$Template->getLayout()}
     </main>
+
+    <footer>
+        {locale group="quiqqer/template-gutenberg" var="copyright.text" year=$smarty.now|date_format:"%Y"}
+    </footer>
 </div>
 
 <!-- Scripts -->

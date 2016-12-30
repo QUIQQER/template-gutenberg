@@ -19,5 +19,5 @@ $Engine->assign(array(
     'Site'       => $Site,
     'Template'   => $Template,
     'Breadcrumb' => $Breadcrumb,
-    'Menu' => new Menu
+    'Menu'       => new \QUI\Controls\Navigation()
 ));
