@@ -1,5 +1,4 @@
 document.addEvent('domready', function () {
-
     // breadcrumb
     var Breadcrumb = document.getElement('.tpl-gutenberg-breadcrumb'),
         BreadcrumbFX = moofx(Breadcrumb),
