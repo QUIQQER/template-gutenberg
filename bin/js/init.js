@@ -52,14 +52,21 @@ document.addEvent('domready', function () {
 
     // menu
     var MenuButton = document.getElement('.tpl-gutenberg-menu-button'),
-        Menu = document.getElement('.tpl-gutenberg-left');
+        Menu = document.getElement('.tpl-gutenberg-left'),
+        Right = document.getElement('.tpl-gutenberg-right');
 
     var hideMenu = function () {
         Menu.addClass('tpl-gutenberg-left-hide');
+        (function() {
+            Right.removeClass('tpl-gutenberg-right-min');
+        }).delay(20)
     };
 
     var showMenu = function () {
-        Menu.removeClass('tpl-gutenberg-left-hide');
+        Right.addClass('tpl-gutenberg-right-min');
+        (function() {
+            Menu.removeClass('tpl-gutenberg-left-hide');
+        }).delay(20);
     };
 
     var menuToggle = function () {

@@ -13,10 +13,9 @@
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
     {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
 
-    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/normalize.css"/>
+    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-web-type/assets/combined.min.css"/>
     <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
-    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/gutenberg.css" media="print"/>
-    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-css/dist/themes/modern.css"/>
+
 
 </head>
 <body class="page-{$Site->getId()}">
@@ -35,8 +34,8 @@
         </div>
     </div>
 
-    <div class="tpl-gutenberg-right">
-        <section class="tpl-gutenberg-right-content">
+    <div class="tpl-gutenberg-right tpl-gutenberg-right-min">
+        <section class="tpl-gutenberg-right-content floatCenter">
             {$Template->getLayout()}
         </section>
 
