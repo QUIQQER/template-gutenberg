@@ -79,4 +79,10 @@ document.addEvent('domready', function () {
 
     MenuButton.addEvent('click', menuToggle);
     hideMenu();
+
+    // menu sticky polyfill
+    require([URL_OPT_DIR + 'bin/fixed-sticky/fixedsticky.js'], function() {
+        Menu.fixedsticky();
+    });
+
 });
