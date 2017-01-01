@@ -51,46 +51,57 @@ document.addEvent('domready', function () {
     });
 
     // menu
-    var MenuButton = document.getElement('.menu-button'),
-        Body = document.body,
+    require([
+        URL_OPT_DIR + 'bin/snapsvg/dist/snap.svg-min.js'
+    ], function () {
 
-        MorphElm = document.getElementById('morph-shape'),
-        S = Snap(MorphElm.querySelector('svg')),
-        Path = S.select('path'),
-        initialPath = Path.attr('d');
+        var MenuButton = document.getElement('.menu-button'),
+            MenuCloseButton = document.getElement('.menu-button-close'),
+            Body = document.body,
 
-    var isMenuOpen = false,
-        isAnimating = false;
+            MorphElm = document.getElementById('morph-shape'),
+            S = Snap(MorphElm.querySelector('svg')),
+            Path = S.select('path'),
 
-    var toggleMenu = function () {
-        if (isAnimating) {
-            return false;
-        }
+            pathOpen = MorphElm.getAttribute('data-morph-open'),
+            initialPath = Path.attr('d');
 
-        isAnimating = true;
+        var isMenuOpen = false,
+            isAnimating = false;
 
-        if (isMenuOpen) {
-            Body.removeClass('show-menu');
+        var toggleMenu = function () {
+            if (isAnimating) {
+                return false;
+            }
+
+            isAnimating = true;
+
+            if (isMenuOpen) {
+                Body.removeClass('show-menu');
+
+                // animate path
+                (function () {
+                    Path.attr('d', initialPath);
+                    isAnimating = false;
+                    isMenuOpen = false;
+                }).delay(300);
+
+                return;
+            }
+
+
+            Body.addClass('show-menu');
 
             // animate path
-            (function () {
-                Path.attr('d', initialPath);
+            Path.animate({
+                'path': pathOpen
+            }, 400, mina.easeinout, function () {
                 isAnimating = false;
-            }).delay(300);
+                isMenuOpen = true;
+            });
+        };
 
-            return;
-        }
-
-
-        Body.addClass('show-menu');
-
-        // animate path
-        path.animate({
-            'path': pathOpen
-        }, 400, mina.easeinout, function () {
-            isAnimating = false;
-        });
-    };
-
-    MenuButton.addEvent('click', toggleMenu);
+        MenuButton.addEvent('click', toggleMenu);
+        MenuCloseButton.addEvent('click', toggleMenu);
+    });
 });
