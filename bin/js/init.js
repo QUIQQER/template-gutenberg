@@ -51,38 +51,46 @@ document.addEvent('domready', function () {
     });
 
     // menu
-    var MenuButton = document.getElement('.tpl-gutenberg-menu-button'),
-        Menu = document.getElement('.tpl-gutenberg-left'),
-        Right = document.getElement('.tpl-gutenberg-right');
+    var MenuButton = document.getElement('.menu-button'),
+        Body = document.body,
 
-    var hideMenu = function () {
-        Menu.addClass('tpl-gutenberg-left-hide');
-        (function() {
-            Right.removeClass('tpl-gutenberg-right-min');
-        }).delay(20)
-    };
+        MorphElm = document.getElementById('morph-shape'),
+        S = Snap(MorphElm.querySelector('svg')),
+        Path = S.select('path'),
+        initialPath = Path.attr('d');
 
-    var showMenu = function () {
-        Right.addClass('tpl-gutenberg-right-min');
-        (function() {
-            Menu.removeClass('tpl-gutenberg-left-hide');
-        }).delay(20);
-    };
+    var isMenuOpen = false,
+        isAnimating = false;
 
-    var menuToggle = function () {
-        if (Menu.hasClass('tpl-gutenberg-left-hide')) {
-            showMenu();
-        } else {
-            hideMenu();
+    var toggleMenu = function () {
+        if (isAnimating) {
+            return false;
         }
+
+        isAnimating = true;
+
+        if (isMenuOpen) {
+            Body.removeClass('show-menu');
+
+            // animate path
+            (function () {
+                Path.attr('d', initialPath);
+                isAnimating = false;
+            }).delay(300);
+
+            return;
+        }
+
+
+        Body.addClass('show-menu');
+
+        // animate path
+        path.animate({
+            'path': pathOpen
+        }, 400, mina.easeinout, function () {
+            isAnimating = false;
+        });
     };
 
-    MenuButton.addEvent('click', menuToggle);
-    hideMenu();
-
-    // menu sticky polyfill
-    require([URL_OPT_DIR + 'bin/stickyfill/index.js'], function() {
-        console.log(Stickyfill);
-    });
-
+    MenuButton.addEvent('click', toggleMenu);
 });

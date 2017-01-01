@@ -19,25 +19,28 @@
 
 </head>
 <body class="page-{$Site->getId()}">
+<div class="container">
+    <div class="menu-wrap">
+        <div class="logo">
+            <a href="{url id=1}"><span class="fa fa-code"></span></a>
+        </div>
+        {$Menu->create()}
 
-<div class="tpl-gutenberg-menu-button">
-    <span class="fa fa-ellipsis-v"></span>
-</div>
-
-<div class="tpl-gutenberg-page">
-    <div class="tpl-gutenberg-left">
-        <div class="tpl-gutenberg-left-container">
-            <div class="tpl-gutenberg-left-logo">
-                <a href="{url id=1}"><span class="fa fa-code"></span></a>
-            </div>
-            {$Menu->create()}
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800"
+                 preserveAspectRatio="none">
+                <path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
+            </svg>
         </div>
     </div>
+    <button class="menu-button">
+        <span class="fa fa-ellipsis-v"></span>
+    </button>
 
-    <div class="tpl-gutenberg-right tpl-gutenberg-right-min">
-        <section class="tpl-gutenberg-right-content floatCenter">
+    <div class="content-wrap">
+        <div class="content">
             {$Template->getLayout()}
-        </section>
+        </div>
 
         <footer>
             {locale group="quiqqer/template-gutenberg" var="copyright.text" year=$smarty.now|date_format:"%Y"}
@@ -50,6 +53,7 @@
 </div>
 
 <!-- Scripts -->
+<script src="{$URL_TPL_DIR}bin/js/snap.js"></script>
 <script src="{$URL_TPL_DIR}bin/js/init.js"></script>
 </body>
 </html>
