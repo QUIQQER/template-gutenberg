@@ -21,9 +21,6 @@ html {
 
 body {
     background: #fafafa;
-    display: flex;
-    flex-flow: row wrap;
-    min-height: 100vh;
 }
 
 pre, code, blockquote {
@@ -43,6 +40,10 @@ pre {
     padding: 10px;
 }
 
+img {
+    max-width: 100%;
+}
+
 /*
 
     color: #993CF3;
@@ -56,6 +57,27 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .hide-on-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-on-desktop {
+        display: none;
+    }
+}
+
+.tpl-gutenberg-page {
+    display: flex;
+    flex-flow: row wrap;
+    float: left;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
 }
 
 /** Right
@@ -75,7 +97,7 @@ a:hover {
 }
 
 .tpl-gutenberg-right footer {
-    border-top: 1px solid rgba(0,0,0,0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
     color: #666;
     margin: 0 auto;
     max-width: 800px;
@@ -94,7 +116,6 @@ a:hover {
     width: 100%;
 }
 
-
 .tpl-gutenberg-breadcrumb ul {
     margin: 0;
     padding: 0;
@@ -103,6 +124,10 @@ a:hover {
 .quiqqer-breadcrumb,
 .quiqqer-breadcrumb-container {
     float: left;
+}
+
+.quiqqer-breadcrumb .fa-angle-right:before {
+    content: "/" !important;
 }
 
 /** Left
@@ -115,14 +140,15 @@ a:hover {
 .tpl-gutenberg-left {
     background: #f1f1f1;
     flex: 400px 0;
+    overflow: hidden;
     padding: 10px;
+    transition: all 250ms linear;
 }
 
 .tpl-gutenberg-left-container {
     position: fixed;
     width: 380px;
 }
-
 
 /*
 
@@ -148,6 +174,18 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 /** MENU
  ======================================= */
 
+.tpl-gutenberg-left-hide {
+    /* 0 does not work so we have to use a small number */
+    /* Start our small */
+    flex: .00001;
+    padding: 0;
+    transition: all 250ms linear;
+}
+
+.tpl-gutenberg-left-hide .tpl-gutenberg-left-container {
+    display: none;
+}
+
 .quiqqer-navigation ul {
     display: block;
     margin: 0 auto !important;
@@ -169,6 +207,19 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     display: none;
 }
 
+.tpl-gutenberg-menu-button {
+    cursor: pointer;
+    float: left;
+    font-size: 30px;
+    left: 0;
+    line-height: 100px;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100px;
+    z-index: 2;
+}
+
 /*
 .quiqqer-navigation a {
     color: #fff;
@@ -180,24 +231,24 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     }
 }
 
-
 /** pagination
  ================================================== */
 
 .quiqqer-sheets-desktop {
     clear: both;
     display: block;
-    marin: 0 auto;
+    margin: 0 auto;
     text-align: center;
 }
 
 .quiqqer-sheets-desktop a,
 .quiqqer-sheets-desktop span {
-    border-radius: 3px;
+    border-radius: 0;
     color: #5d5d5d;
+    display: inline-block;
+    float: none !important;
     margin-right: 2px !important;
     padding: 0 15px;
-    float: none;
 }
 
 .quiqqer-sheets-desktop a:hover {
@@ -207,8 +258,9 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 .quiqqer-sheets-desktop .quiqqer-sheets-desktop-current {
     background: #D9D6D7;
     border: 1px solid #D9D6D7;
-    border-radius: 3px;
+    border-radius: 0;
     color: #333;
+    line-height: 30px;
 }
 
 .quiqqer-sheets-desktop-disabled {

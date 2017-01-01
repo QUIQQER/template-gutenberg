@@ -21,26 +21,30 @@
 </head>
 <body class="page-{$Site->getId()}">
 
+<div class="tpl-gutenberg-menu-button">
+    <span class="fa fa-ellipsis-v"></span>
+</div>
 
-<div class="tpl-gutenberg-left">
-    <div class="tpl-gutenberg-left-container">
-        <div class="tpl-gutenberg-left-logo">
-            <a href="{url id=1}"><span class="fa fa-code"></span></a>
+<div class="tpl-gutenberg-page">
+    <div class="tpl-gutenberg-left">
+        <div class="tpl-gutenberg-left-container">
+            <div class="tpl-gutenberg-left-logo">
+                <a href="{url id=1}"><span class="fa fa-code"></span></a>
+            </div>
+            {$Menu->create()}
         </div>
-        {$Menu->create()}
+    </div>
+
+    <div class="tpl-gutenberg-right">
+        <section class="tpl-gutenberg-right-content">
+            {$Template->getLayout()}
+        </section>
+
+        <footer>
+            {locale group="quiqqer/template-gutenberg" var="copyright.text" year=$smarty.now|date_format:"%Y"}
+        </footer>
     </div>
 </div>
-
-<div class="tpl-gutenberg-right">
-    <main class="tpl-gutenberg-right-content">
-        {$Template->getLayout()}
-    </main>
-
-    <footer>
-        {locale group="quiqqer/template-gutenberg" var="copyright.text" year=$smarty.now|date_format:"%Y"}
-    </footer>
-</div>
-
 
 <div class="tpl-gutenberg-breadcrumb">
     {$Breadcrumb->create()}
