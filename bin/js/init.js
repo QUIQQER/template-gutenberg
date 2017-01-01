@@ -81,8 +81,8 @@ document.addEvent('domready', function () {
     hideMenu();
 
     // menu sticky polyfill
-    require([URL_OPT_DIR + 'bin/fixed-sticky/fixedsticky.js'], function() {
-        Menu.fixedsticky();
+    require([URL_OPT_DIR + 'bin/stickyfill/index.js'], function() {
+        console.log(Stickyfill);
     });
 
 });
