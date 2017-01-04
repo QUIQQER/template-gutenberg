@@ -17,10 +17,17 @@
     <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
 </head>
 <body class="page-{$Site->getId()}">
+
+<a href="{url id=1}" title="{site id=1 attribute=title}" class="page-logo">
+    <span class="fa fa-code"></span>
+</a>
+
 <div class="container">
     <div class="menu-wrap">
         <div class="logo">
-            <a href="{url id=1}"><span class="fa fa-code"></span></a>
+            <a href="{url id=1}" title="{site id=1 attribute=title}">
+                <span class="fa fa-code"></span>
+            </a>
         </div>
 
         {$Menu->create()}
@@ -44,6 +51,7 @@
     <button class="menu-button">
         <span class="fa fa-ellipsis-v"></span>
     </button>
+
 
     <div class="content-wrap">
         <div class="content">

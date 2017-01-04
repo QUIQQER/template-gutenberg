@@ -208,6 +208,23 @@ button, .button {
     margin: 0 10px !important;
 }
 
+.page-logo {
+    cursor: pointer;
+    font-size: 3em;
+    padding: 0.5em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.page-logo.hide {
+    display: none;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
 /** MENU
  ======================================= */
 

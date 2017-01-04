@@ -75,6 +75,7 @@ document.addEvent('domready', function () {
 
             isAnimating = true;
 
+            // close menu
             if (isMenuOpen) {
                 Body.removeClass('show-menu');
 
@@ -83,12 +84,14 @@ document.addEvent('domready', function () {
                     Path.attr('d', initialPath);
                     isAnimating = false;
                     isMenuOpen = false;
+
+                    document.getElement('.page-logo').removeClass('hide');
                 }).delay(300);
 
                 return;
             }
 
-
+            // show menu
             Body.addClass('show-menu');
 
             // animate path
@@ -97,6 +100,8 @@ document.addEvent('domready', function () {
             }, 400, mina.easeinout, function () {
                 isAnimating = false;
                 isMenuOpen = true;
+
+                document.getElement('.page-logo').addClass('hide');
             });
         };
 
