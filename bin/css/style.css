@@ -83,6 +83,49 @@ a:hover {
     width: 100%;
 }
 
+/** Buttons
+ ======================================= */
+
+button, .button {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.button::before {
+    background: #37474f;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-decoration: none;
+    top: 0;
+    transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    transform-origin: 0 100%;
+    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+    -webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+    -webkit-transform-origin: 0 100%;
+    width: 150%;
+    z-index: -1;
+}
+
+.button:hover {
+    color: #fff !important;
+    border-color: #c94e50;
+    text-decoration: none;
+}
+
+.button:hover::before {
+    background-color: #c94e50;
+    opacity: 1;
+    transform: rotate3d(0, 0, 1, 0deg);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
 /** Content
  ======================================= */
 
