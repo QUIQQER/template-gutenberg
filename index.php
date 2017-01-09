@@ -23,7 +23,8 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 $Engine->assign(array(
     'menuBackground'     => '#373a47',
     'menuLinkColor'      => '#b8b7ad',
-    'menuLinkColorHover' => '#c94e50'
+    'menuLinkColorHover' => '#c94e50',
+    'buttonColorHover'   => 'blue'
 ));
 
 /**

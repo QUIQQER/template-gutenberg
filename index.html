@@ -26,6 +26,33 @@
             background: #fafafa;
             fill: {$menuBackground};
         }
+
+        .logo a,
+        .quiqqer-navigation-entry a {
+            color: {$menuLinkColor};
+        }
+
+        .logo a:hover,
+        .menu-button-close:hover,
+        .quiqqer-navigation-entry a:hover {
+            color: {$menuLinkColorHover};
+        }
+
+        button:hover,
+        .button:hover {
+            border-color: {$buttonColorHover};
+        }
+
+        button:hover::before,
+        .button:hover::before {
+            background-color: {$buttonColorHover};
+        }
+
+        .menu-button:hover,
+        .menu-button:hover::before {
+            background-color: transparent;
+            color: #222 !important;
+        }
     </style>
 </head>
 <body class="page-{$Site->getId()}">
