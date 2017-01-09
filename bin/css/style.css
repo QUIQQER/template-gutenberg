@@ -111,12 +111,14 @@ button, .button {
     z-index: -1;
 }
 
+button:hover,
 .button:hover {
     color: #fff !important;
     border-color: #c94e50;
     text-decoration: none;
 }
 
+button:hover::before,
 .button:hover::before {
     background-color: #c94e50;
     opacity: 1;
