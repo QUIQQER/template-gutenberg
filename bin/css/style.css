@@ -316,20 +316,19 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 }
 
 .menu-wrap {
-    background: #373a47;
     font-size: 1.15em;
     height: 100%;
+    padding-right: 100px;
     position: fixed;
-    transform: translate3d(-300px, 0, 0);
-    transition: transform 0.3s;
-    -webkit-transform: translate3d(-300px, 0, 0);
+    transform: translate3d(-400px, 0, 0);
+    transition: all 0.3s;
+    -webkit-transform: translate3d(-400px, 0, 0);
     -webkit-transition: -webkit-transform 0.3s;
-    width: 300px;
+    width: 400px;
     z-index: 1001;
 }
 
 .menu {
-    background: #373a47;
     height: 100%;
     padding: 2em 1em;
     width: calc(100% - 120px);
@@ -364,19 +363,20 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 
 /* Morph Shape */
 .morph-shape {
-    fill: #373a47;
     height: 100%;
     position: absolute;
     right: 0;
     top: 0;
-    width: 120px;
+    width: 100px;
     z-index: 1;
 }
 
 /* Shown menu */
 .show-menu .menu-wrap {
-    -webkit-transform: translate3d(0, 0, 0);
+    padding-right: 0;
     transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    width: 300px;
 }
 
 .show-menu .content-wrap {
@@ -384,14 +384,16 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     transition-delay: 0.1s;
     -webkit-transform: translate3d(100px, 0, 0);
     -webkit-transition-delay: 0.1s;
-
 }
 
-/*
-.quiqqer-navigation a {
-    color: #fff;
+.menu-opened .menu-wrap {
+    padding-right: 0;
+    width: 300px;
 }
-*/
+
+.menu-opened .morph-shape {
+    display: none !important;
+}
 
 .quiqqer-sub-nav-div {
     display: none;

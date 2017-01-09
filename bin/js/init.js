@@ -86,6 +86,7 @@ document.addEvent('domready', function () {
                     isMenuOpen = false;
 
                     document.getElement('.page-logo').removeClass('hide');
+                    Body.removeClass('menu-opened');
                 }).delay(300);
 
                 return;
@@ -102,6 +103,7 @@ document.addEvent('domready', function () {
                 isMenuOpen = true;
 
                 document.getElement('.page-logo').addClass('hide');
+                Body.addClass('menu-opened');
             });
         };
 

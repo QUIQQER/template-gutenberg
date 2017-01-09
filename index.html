@@ -7,14 +7,26 @@
     {pace}
     {fontawesome}
 
+    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-web-type/assets/combined.min.css"/>
+    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
+
     {$Template->getHeader()}
 
     {assign var=layoutType value=$Template->getLayoutType()}
     {assign var=headerSuffixBricks value=$BricksManager->getBricksByArea('headerSuffix', $Site)}
     {assign var=footerPrefixBricks value=$BricksManager->getBricksByArea('footerPrefix', $Site)}
 
-    <link rel="stylesheet" href="{$URL_OPT_DIR}bin/gutenberg-web-type/assets/combined.min.css"/>
-    <link rel="stylesheet" href="{$URL_TPL_DIR}bin/css/style.css"/>
+    <style>
+        .menu,
+        .menu-wrap {
+            background: {$menuBackground}
+        }
+
+        .morph-shape {
+            background: #fafafa;
+            fill: {$menuBackground};
+        }
+    </style>
 </head>
 <body class="page-{$Site->getId()}">
 
@@ -44,7 +56,7 @@
         </div>
 
         <div class="menu-button-close">
-            <span class="fa fa-remove"></span>
+            <span class="fa fa-close"></span>
         </div>
     </div>
 
