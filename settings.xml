@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <project>
+        <settings>
+            <config>
+                <section name="templateGutenberg.settings">
+                    <conf name="menuBackground">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#373a47</defaultvalue>
+                    </conf>
+                    <conf name="menuLinkColor">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#b8b7ad</defaultvalue>
+                    </conf>
+                    <conf name="menuLinkColorHover">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#c94e50</defaultvalue>
+                    </conf>
+                    <conf name="buttonColorHover">
+                        <type><![CDATA[string]]></type>
+                        <defaultvalue>#c94e50</defaultvalue>
+                    </conf>
+                </section>
+            </config>
+
+            <window>
+                <categories>
+                    <category name="templateGutenberg">
+                        <text>
+                            <locale group="quiqqer/template-gutenberg"
+                                    var="templateGutenberg.settings.menu.title"
+                            />
+                        </text>
+                        <icon>URL_BIN_DIR/22x22/quiqqer.png</icon>
+
+                        <!-- Background Color Switcher Prefix / Suffix -->
+                        <settings title="templateGutenberg.settings" name="templateGutenberg.settings.colors">
+                            <title>
+                                <locale group="quiqqer/template-gutenberg"
+                                        var="templateGutenberg.settings.colors"
+                                />
+                            </title>
+
+                            <input conf="templateGutenberg.settings.menuLinkColor" type="color">
+                                <text>
+                                    <locale group="quiqqer/template-gutenberg"
+                                            var="templateGutenberg.settings.menuLinkColor.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <input conf="templateGutenberg.settings.menuBackground" type="color">
+                                <text>
+                                    <locale group="quiqqer/template-gutenberg"
+                                            var="templateGutenberg.settings.menuBackground.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <input conf="templateGutenberg.settings.menuLinkColorHover" type="color">
+                                <text>
+                                    <locale group="quiqqer/template-gutenberg"
+                                            var="templateGutenberg.settings.menuLinkColorHover.text"
+                                    />
+                                </text>
+                            </input>
+
+                            <input conf="templateGutenberg.settings.buttonColorHover" type="color">
+                                <text>
+                                    <locale group="quiqqer/template-gutenberg"
+                                            var="templateGutenberg.settings.buttonColorHover.text"
+                                    />
+                                </text>
+                            </input>
+                        </settings>
+
+                    </category>
+                </categories>
+            </window>
+        </settings>
+    </project>
+</quiqqer>

@@ -3,7 +3,19 @@
 /**
  * Emotion
  */
-QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
+//QUI\Utils\Site::setRecursivAttribute($Site, 'image_emotion');
+
+$emotion = '';
+
+if ($Site->getAttribute('image_emotion')) {
+    try {
+        $Emotion = \QUI\Projects\Media\Utils::getImageByUrl($Site->getAttribute('image_emotion'));
+        $emotion = $Emotion->getSizeCacheUrl(1600, 1600);
+    } catch (QUI\Exception $Exception) {
+    }
+}
+
+$Engine->assign('emotion', $emotion);
 
 /**
  * Breadcrumb
@@ -13,18 +25,12 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 /**
  * Color settings
  */
-//
-//$Engine->assign(array(
-//    'menuBackground'     => '#373a47',
-//    'menuLinkColor'      => '#b8b7ad',
-//    'menuLinkColorHover' => '#c94e50'
-//));
 
 $Engine->assign(array(
-    'menuBackground'     => '#373a47',
-    'menuLinkColor'      => '#b8b7ad',
-    'menuLinkColorHover' => '#c94e50',
-    'buttonColorHover'   => 'blue'
+    'menuBackground'     => $Project->getConfig('templateGutenberg.settings.menuBackground'),
+    'menuLinkColor'      => $Project->getConfig('templateGutenberg.settings.menuLinkColor'),
+    'menuLinkColorHover' => $Project->getConfig('templateGutenberg.settings.menuLinkColorHover'),
+    'buttonColorHover'   => $Project->getConfig('templateGutenberg.settings.buttonColorHover')
 ));
 
 /**

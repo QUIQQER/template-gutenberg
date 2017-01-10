@@ -228,6 +228,22 @@ button:hover::before,
     transition: all 0.3s;
 }
 
+.emotion {
+    color: #fff;
+    float: left;
+    height: 60vh;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.emotion h1 {
+    font-size: 4em;
+    padding-top: 2em;
+}
+
 /** MENU
  ======================================= */
 
@@ -455,7 +471,7 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     margin-bottom: 0;
 }
 
-..qui-control-childrenlist-1er-entry {
+.qui-control-childrenlist-1er-entry {
     padding: 0;
 }
 

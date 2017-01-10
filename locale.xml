@@ -16,5 +16,30 @@
             <en><![CDATA[Copyright [year] - All rights reserved]]></en>
         </locale>
 
+        <locale name="templateGutenberg.settings.menu.title">
+            <de><![CDATA[Template Gutenberg Einstellungen]]></de>
+            <en><![CDATA[Template Gutenberg settings]]></en>
+        </locale>
+        <locale name="templateGutenberg.settings.colors">
+            <de><![CDATA[Farb-Einstellungen]]></de>
+            <en><![CDATA[Color settings]]></en>
+        </locale>
+        <locale name="templateGutenberg.settings.menuLinkColor.text">
+            <de><![CDATA[Linkfarbe im Menü]]></de>
+            <en><![CDATA[Link color in the menu]]></en>
+        </locale>
+        <locale name="templateGutenberg.settings.menuLinkColorHover.text">
+            <de><![CDATA[Hover Linkfarben im Menü]]></de>
+            <en><![CDATA[hover link colors in the menu]]></en>
+        </locale>
+        <locale name="templateGutenberg.settings.menuBackground.text">
+            <de><![CDATA[hintergrundfarbe des Menüs]]></de>
+            <en><![CDATA[Backgroundcolor of the menu]]></en>
+        </locale>
+        <locale name="templateGutenberg.settings.buttonColorHover.text">
+            <de><![CDATA[Button Hover Farbe]]></de>
+            <en><![CDATA[Color of button hover]]></en>
+        </locale>
+
     </groups>
 </locales>

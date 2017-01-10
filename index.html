@@ -19,11 +19,11 @@
     <style>
         .menu,
         .menu-wrap {
-            background: {$menuBackground}
+            background: {$menuBackground};
         }
 
         .morph-shape {
-            background: #fafafa;
+            background: #fff;
             fill: {$menuBackground};
         }
 
@@ -91,6 +91,12 @@
         <span class="fa fa-ellipsis-v"></span>
     </button>
 
+    <div class="emotion" style="background-image: url('{$emotion}')">
+        <h1>{$Site->getAttribute('title')}</h1>
+        <div class="emotion-short">
+            {$Site->getAttribute('short')}
+        </div>
+    </div>
 
     <div class="content-wrap">
         <div class="content">
