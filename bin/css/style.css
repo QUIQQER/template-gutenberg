@@ -498,3 +498,8 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
     min-width: calc(100% - 200px);
     width: calc(100% - 200px);
 }
+
+.quiqqer-cookieconsent-accept {
+    line-height: 20px;
+    margin: 0;
+}
