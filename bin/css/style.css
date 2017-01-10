@@ -244,6 +244,12 @@ button:hover::before,
     padding-top: 2em;
 }
 
+@media (max-width: 767px) {
+    .content {
+        padding: 2.25em;
+    }
+}
+
 /** MENU
  ======================================= */
 
