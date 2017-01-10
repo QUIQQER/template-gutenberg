@@ -29,5 +29,5 @@
     "quiqqer\/pace": ">=1.2.0|dev-master|dev-dev",
     "quiqqer\/sitetypes": "*@dev"
   },
-  "version": "dev-dev"
+  "version": "dev-master"
 }
