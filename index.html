@@ -19,33 +19,63 @@
     <style>
         .menu,
         .menu-wrap {
-            background: {$menuBackground};
+
+        background: {
+            $ menuBackground
+        }
+
+        ;
         }
 
         .morph-shape {
             background: #fff;
-            fill: {$menuBackground};
+
+        fill: {
+            $ menuBackground
+        }
+
+        ;
         }
 
         .logo a,
         .quiqqer-navigation-entry a {
-            color: {$menuLinkColor};
+
+        color: {
+            $ menuLinkColor
+        }
+
+        ;
         }
 
         .logo a:hover,
         .menu-button-close:hover,
         .quiqqer-navigation-entry a:hover {
-            color: {$menuLinkColorHover};
+
+        color: {
+            $ menuLinkColorHover
+        }
+
+        ;
         }
 
         button:hover,
         .button:hover {
-            border-color: {$buttonColorHover};
+
+        border-color: {
+            $ buttonColorHover
+        }
+
+        ;
         }
 
         button:hover::before,
         .button:hover::before {
-            background-color: {$buttonColorHover};
+
+        background-color: {
+            $ buttonColorHover
+        }
+
+        ;
         }
 
         .menu-button:hover,
@@ -91,12 +121,14 @@
         <span class="fa fa-ellipsis-v"></span>
     </button>
 
+    {if $emotion !== ''}
     <div class="emotion" style="background-image: url('{$emotion}')">
         <h1>{$Site->getAttribute('title')}</h1>
         <div class="emotion-short">
             {$Site->getAttribute('short')}
         </div>
     </div>
+    {/if}
 
     <div class="content-wrap">
         <div class="content">
