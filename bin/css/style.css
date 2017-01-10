@@ -487,3 +487,14 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 .blog-entry-time {
     display: none;
 }
+
+.quiqqer-cookieconsent {
+    margin: 0;
+    min-width: 100%;
+}
+
+.quiqqer-cookieconsent-message {
+    margin: 0;
+    min-width: calc(100% - 200px);
+    width: calc(100% - 200px);
+}
