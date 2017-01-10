@@ -244,12 +244,6 @@ button:hover::before,
     padding-top: 2em;
 }
 
-@media (max-width: 767px) {
-    .content {
-        padding: 2.25em;
-    }
-}
-
 /** MENU
  ======================================= */
 
@@ -508,4 +502,8 @@ text-shadow: 0 0 10px rgba(255, 255, 255, 1),
 .quiqqer-cookieconsent-accept {
     line-height: 20px;
     margin: 0;
+}
+
+.blog-entry {
+    width 80%;
 }
