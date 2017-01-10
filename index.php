@@ -26,11 +26,10 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
  * Color settings
  */
 
+$cssSettings = include 'settings.css.php';
+
 $Engine->assign(array(
-    'menuBackground'     => $Project->getConfig('templateGutenberg.settings.menuBackground'),
-    'menuLinkColor'      => $Project->getConfig('templateGutenberg.settings.menuLinkColor'),
-    'menuLinkColorHover' => $Project->getConfig('templateGutenberg.settings.menuLinkColorHover'),
-    'buttonColorHover'   => $Project->getConfig('templateGutenberg.settings.buttonColorHover')
+    'customCSS' => '<style>' . $cssSettings . '</style>'
 ));
 
 /**
