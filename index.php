@@ -29,7 +29,7 @@ $Breadcrumb = new QUI\Controls\Breadcrumb();
 $cssSettings = include 'settings.css.php';
 
 $Engine->assign(array(
-    'customCSS' => '<style>' . $cssSettings . '</style>'
+    'cssSettings' => '<style>' . $cssSettings . '</style>'
 ));
 
 /**
