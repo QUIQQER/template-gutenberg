@@ -103,7 +103,6 @@ button::before,
     left: 0;
     padding: 0 0 0 5px;
     position: absolute;
-    text-align: center;
     text-decoration: none;
     top: 0;
     transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
