@@ -32,7 +32,7 @@ ob_start();
 
 button:hover,
 .button:hover {
-    border-color: <?php echo $buttonColorHover; ?>
+    border-color: <?php echo $buttonColorHover; ?>;
 }
 
 button:hover::before,

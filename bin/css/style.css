@@ -94,9 +94,11 @@ button, .button {
     position: relative;
 }
 
+button::before,
 .button::before {
     background: #37474f;
-    content: '';
+    content: '\f01d';
+    font-family: FontAwesome;
     height: 100%;
     left: 0;
     position: absolute;
@@ -127,6 +129,7 @@ button:hover::before,
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     -webkit-transform: rotate3d(0, 0, 1, 0deg);
     -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    z-index: 1;
 }
 
 /** Content
