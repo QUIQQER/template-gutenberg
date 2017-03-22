@@ -46,8 +46,26 @@
             <en><![CDATA[Layout - No sidebar]]></en>
         </locale>
         <locale name="admin.layout.noSidebar.desc">
-            <de><![CDATA[Layout - Keine Sidebar]]></de>
-            <en><![CDATA[Layout - No sidebar]]></en>
+            <de><![CDATA[Keine Sidebar]]></de>
+            <en><![CDATA[No sidebar]]></en>
+        </locale>
+
+        <locale name="area.sidebar.suffix.content.title">
+            <de><![CDATA[Suffix Zone]]></de>
+            <en><![CDATA[Suffix area]]></en>
+        </locale>
+        <locale name="area.sidebar.suffix.content.description">
+            <de><![CDATA[Bausteinzone nach dem Inhalt]]></de>
+            <en><![CDATA[Brickarea after the content]]></en>
+        </locale>
+
+        <locale name="area.sidebar.prefix.content.title">
+            <de><![CDATA[Prefix Zone]]></de>
+            <en><![CDATA[Prefix area]]></en>
+        </locale>
+        <locale name="area.sidebar.prefix.content.description">
+            <de><![CDATA[Bausteinzone vor dem Inhalt]]></de>
+            <en><![CDATA[Brickarea before the content]]></en>
         </locale>
 
     </groups>
