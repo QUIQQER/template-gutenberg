@@ -41,5 +41,14 @@
             <en><![CDATA[Color of button hover]]></en>
         </locale>
 
+        <locale name="admin.layout.noSidebar">
+            <de><![CDATA[Layout - Keine Sidebar]]></de>
+            <en><![CDATA[Layout - No sidebar]]></en>
+        </locale>
+        <locale name="admin.layout.noSidebar.desc">
+            <de><![CDATA[Layout - Keine Sidebar]]></de>
+            <en><![CDATA[Layout - No sidebar]]></en>
+        </locale>
+
     </groups>
 </locales>
